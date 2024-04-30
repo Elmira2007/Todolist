@@ -17,4 +17,4 @@ class TodoViewSet(GenericViewSet,
     serializer_class = TodoSerializers
     filter_backends = [DjangoFilterBackend]
     filterset_fields =['title']
-    permission_classes = (IsAuthenticated, )
+    # permission_classes = (IsAuthenticated, )

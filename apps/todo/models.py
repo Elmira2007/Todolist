@@ -4,6 +4,10 @@ from apps.users.models import Users
 
 # Create your models here.
 class Todo(models.Model):
+    performing = models.ForeignKey(
+        Users, on_delete=models.CASCADE,
+        verbose_name = 'Выполняющий таск'
+    )
     title = models.CharField(
         max_length = 255,
         verbose_name = "Название задание",
